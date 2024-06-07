@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-        referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-    <div class="w-full h-screen" id="container">
-        {% include('partials/nav.html') %}
-        {% block content %}{% endblock %}
-        {% include('partials/footer.html') %}
+  <body class="h-screen">
+    {% include('partials/nav.html') %}
+
+    <div class="w-full h-full lg:px-40 px-2 lg:pt-20 pt-10">
+      {% block content %}{% endblock %}
     </div>
-</body>
-
+  </body>
 </html>
